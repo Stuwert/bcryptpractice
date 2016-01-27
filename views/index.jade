@@ -1,8 +1,7 @@
 extends layout
 
 block content
-  h1= title
-  if user
-    p Welcome #{user.name}
+  if email
+    p Welcome #{email}
   else
     p Please #[a(href='/signin') Sign in!] or #[a(href='/signup') Sign up!]

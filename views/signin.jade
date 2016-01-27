@@ -4,7 +4,11 @@ block content
   h1 Sign In
   form(method='post' action='/signin')
     label Email Address
-    input(type='text' placeholder='Use the email address you signed up with')
+    if email && email.bool !== true
+      p.red= email.value
+    input(type='text' name="email" placeholder='Use the email address you signed up with' value = email && email.bool === true ? email.value : "")
     label Password
-    input(type='password' placeholder='You know how this one works')
+    if password && password.bool !== true
+      p.red= password.value
+    input(type='password' name="password" placeholder='You know how this one works' value = password && password.bool === true ? password.value : "")
     button Log-in
