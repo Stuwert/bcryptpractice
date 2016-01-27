@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1 Sign Up
+  form(method='post' action='/signin')
+    label Email Address
+    input(type='text' placeholder='Use the email address you signed up with')
+    label Password
+    input(type='password' placeholder='You know how this one works')
+    label Confirm Password
+    input(type='password' placeholder='Make sure this is the same as the one above')
+    button Sign-up
